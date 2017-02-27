@@ -1,0 +1,50 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #popup {
+        width: 600px;
+      }
+      h1 {
+        text-shadow: 3px 3px 3px #ccc;
+      }
+      .input {
+        width: 500px;
+        line-height: 30px;
+        border-radius: 3px;
+        outline: 0;
+        font-size: 16px;
+        padding: 0 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="popup">
+      <h1>Auto Load Script</h1>
+      <p>
+        <label for="url">Path: </label>
+        <input type="text" id="url" name="url" class="input" />
+      </p>
+      <p>
+        <input type="checkbox" id="enabled" />
+        <label for="enabled">Enabled</label>
+      </p>
+      <p id="output"></p>
+    </div>
+    <div id="scriptContent">
+      <script src="popup.js"></script>
+    </div>
+  </body>
+</html>
+
